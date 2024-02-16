@@ -13,6 +13,7 @@ var curretnSlide = document.querySelector('.jl-current-slide');
 var totalSlide = document.querySelector('.jl-total-slide');
 var currentCounter = 1;
 var navItems = document.querySelectorAll('.jl-item-navigator a');
+var navCounter = document.querySelector('.jl-navigator-counter span');
 
 
 //Capturando larguras individuais
@@ -72,6 +73,8 @@ var counterAdd = function () {
     if(currentCounter >= 0 && currentCounter < sliderTotalItems){
         currentCounter++
         curretnSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
+        
    
     }
  }
@@ -81,6 +84,7 @@ var counterAdd = function () {
     if(currentCounter > 1 && currentCounter <= sliderTotalItems){
         currentCounter--;
         curretnSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
  }
 //Set Active Nav
